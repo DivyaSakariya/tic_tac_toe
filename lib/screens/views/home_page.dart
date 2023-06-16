@@ -101,7 +101,7 @@ class HomePage extends StatelessWidget {
                             child: Text(
                               provider.displayValue[index],
                               style: const TextStyle(
-                                color: Colors.green,
+                                color: Colors.white,
                                 fontSize: 45,
                               ),
                             ),
