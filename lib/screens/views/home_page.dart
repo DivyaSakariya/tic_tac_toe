@@ -87,7 +87,10 @@ class HomePage extends StatelessWidget {
                       padding: const EdgeInsets.all(5),
                       child: GestureDetector(
                         onTap: () {
-                          provider.tappedBox(index: index);
+                          provider.tappedBox(
+                            index: index,
+                            context: context,
+                          );
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -112,10 +115,10 @@ class HomePage extends StatelessWidget {
               Expanded(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Text(
-                      "Player X's turns...",
-                      style: TextStyle(
+                      "Player ${provider.playerTurn}'s turns...",
+                      style: const TextStyle(
                         fontSize: 18,
                         color: Colors.white,
                       ),
@@ -128,7 +131,9 @@ class HomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        provider.clearScoreBoard();
+                      },
                       child: const Text("Clear Score Board"),
                     ),
                   ],

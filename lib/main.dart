@@ -207,7 +207,7 @@ class _TicTacToeState extends State<TicTacToe> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text("\" " + winner + " \" is Winner!!!"),
+            title: Text("\" $winner \" is Winner!!!"),
             actions: [
               ElevatedButton(
                 child: Text("Play Again"),
