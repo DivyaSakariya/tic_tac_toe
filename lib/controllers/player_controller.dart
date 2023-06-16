@@ -19,12 +19,6 @@ class PlayerController extends ChangeNotifier {
       playerTurn = "O";
     }
 
-    // if (turnO) {
-    //   playerTurn = "O";
-    // } else if (!turnO) {
-    //   playerTurn = "X";
-    // }
-
     turnO = !turnO;
     _checkWinner(context);
     notifyListeners();
